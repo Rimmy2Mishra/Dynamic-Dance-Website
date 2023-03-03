@@ -1,0 +1,33 @@
+extends base.pug
+
+block style 
+    style 
+        include contact.css 
+
+
+block content 
+    section#contact 
+        h1 Contact Us 
+        div#myform
+            form(action="/contact",method="post")
+                
+                
+                input(type="text", name="name",placeholder="Type your name", id="entername")
+                
+                
+                input(type="number", name="number",placeholder="Type your phone number", id="enternumber")
+                
+                
+                input(type="number", name="age",placeholder="Type your age", id="enterage")
+                
+                
+                input(type="email", name="email",placeholder="Type your email", id="enteremail")
+                
+                
+                select#location(name="location")
+                    option Kolkata
+                    option Delhi
+                    option Bangalore
+                    option Mumbai
+                
+                button.btn Submit
